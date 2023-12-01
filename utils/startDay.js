@@ -9,6 +9,9 @@ const argv = yargs(hideBin(process.argv))
 
 const day = parseInt(argv.day, 10)
 
-nodemon({ script: `days/${day}/index.js` }).on('start', () => {
+nodemon({
+  script: `days/${day}/index.js`,
+  ext: 'js txt',
+}).on('start', () => {
   console.clear()
 })
