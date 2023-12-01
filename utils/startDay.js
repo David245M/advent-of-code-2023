@@ -13,5 +13,5 @@ nodemon({
   script: `days/${day}/index.js`,
   ext: 'js txt',
 }).on('start', () => {
-  console.clear()
+  process.stdout.write('\x1bc')
 })
